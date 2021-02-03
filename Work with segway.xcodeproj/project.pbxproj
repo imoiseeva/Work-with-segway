@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		5F472DAC25C94F090076C500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F472DAB25C94F090076C500 /* AppDelegate.swift */; };
 		5F472DAE25C94F090076C500 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F472DAD25C94F090076C500 /* SceneDelegate.swift */; };
-		5F472DB025C94F090076C500 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F472DAF25C94F090076C500 /* ViewController.swift */; };
+		5F472DB025C94F090076C500 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F472DAF25C94F090076C500 /* LogInViewController.swift */; };
 		5F472DB325C94F090076C500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F472DB125C94F090076C500 /* Main.storyboard */; };
 		5F472DB525C94F0C0076C500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F472DB425C94F0C0076C500 /* Assets.xcassets */; };
 		5F472DB825C94F0C0076C500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F472DB625C94F0C0076C500 /* LaunchScreen.storyboard */; };
+		5F472DC325C967B20076C500 /* WelcomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F472DC225C967B20076C500 /* WelcomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5F472DA825C94F090076C500 /* Work with segway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Work with segway.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F472DAB25C94F090076C500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F472DAD25C94F090076C500 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5F472DAF25C94F090076C500 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5F472DAF25C94F090076C500 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5F472DB225C94F090076C500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F472DB425C94F0C0076C500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F472DB725C94F0C0076C500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F472DB925C94F0C0076C500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F472DC225C967B20076C500 /* WelcomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +60,22 @@
 			children = (
 				5F472DAB25C94F090076C500 /* AppDelegate.swift */,
 				5F472DAD25C94F090076C500 /* SceneDelegate.swift */,
-				5F472DAF25C94F090076C500 /* ViewController.swift */,
+				5F472DC525C99AA60076C500 /* Controllers */,
 				5F472DB125C94F090076C500 /* Main.storyboard */,
 				5F472DB425C94F0C0076C500 /* Assets.xcassets */,
 				5F472DB625C94F0C0076C500 /* LaunchScreen.storyboard */,
 				5F472DB925C94F0C0076C500 /* Info.plist */,
 			);
 			path = "Work with segway";
+			sourceTree = "<group>";
+		};
+		5F472DC525C99AA60076C500 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5F472DAF25C94F090076C500 /* LogInViewController.swift */,
+				5F472DC225C967B20076C500 /* WelcomViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F472DB025C94F090076C500 /* ViewController.swift in Sources */,
+				5F472DB025C94F090076C500 /* LogInViewController.swift in Sources */,
 				5F472DAC25C94F090076C500 /* AppDelegate.swift in Sources */,
 				5F472DAE25C94F090076C500 /* SceneDelegate.swift in Sources */,
+				5F472DC325C967B20076C500 /* WelcomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
