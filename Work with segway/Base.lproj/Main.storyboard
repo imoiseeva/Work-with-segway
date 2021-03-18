@@ -102,16 +102,16 @@
                                 <rect key="frame" x="15" y="0.0" width="285" height="248"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="kkH-0f-mGW">
-                                        <rect key="frame" x="94.5" y="74.5" width="96" height="98.5"/>
+                                        <rect key="frame" x="115.5" y="74.5" width="54.5" height="98.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJw-rG-jYr">
-                                                <rect key="frame" x="21" y="0.0" width="54.5" height="27.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="54.5" height="27.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erf-Mz-147">
-                                                <rect key="frame" x="0.0" y="49.5" width="96" height="49"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erf-Mz-147">
+                                                <rect key="frame" x="4" y="49.5" width="46" height="49"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -157,7 +157,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="06y-4M-cev"/>
                     <connections>
-                        <outlet property="emojiLabel" destination="erf-Mz-147" id="C1u-AQ-A0H"/>
                         <outlet property="welcomLabel" destination="eJw-rG-jYr" id="nJs-uN-hZt"/>
                     </connections>
                 </viewController>

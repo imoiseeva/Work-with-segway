@@ -22,12 +22,12 @@ class LogInViewController: UIViewController {
     
     @IBAction func logButtonPresed() {
         if nameTextField.text != user ||
-           passwordTextField.text != password {
+            passwordTextField.text != password {
             showAlert(with: "Invalid login or password",
                       message: "Pleas, enter correct login and password")
             return
         }
-       performSegue(withIdentifier: "showWelcom", sender: nil)
+        performSegue(withIdentifier: "showWelcom", sender: nil)
     }
     
     @IBAction func forgetUserName() {

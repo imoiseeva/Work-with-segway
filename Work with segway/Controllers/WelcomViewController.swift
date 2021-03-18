@@ -9,9 +9,7 @@ import UIKit
 
 class WelcomViewController: UIViewController, UITextFieldDelegate {
     
-    
     @IBOutlet weak var welcomLabel: UILabel!
-    @IBOutlet weak var emojiLabel: UILabel!
     
     var userName: String?
     
@@ -23,18 +21,15 @@ class WelcomViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emojiLabel.text = "👋"
-        
         guard let userName = self.userName else { return }
         welcomLabel.text = "Welcom, \(userName)"
     }
     
     @IBAction func logOut() {
-        
         dismiss(animated: true)
     }
     
-   private func setGradientBackground() {
+    private func setGradientBackground() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
         gradientLayer.colors = [UIColor.blue.cgColor, UIColor.white.cgColor]
