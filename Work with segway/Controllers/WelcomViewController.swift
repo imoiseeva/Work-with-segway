@@ -34,7 +34,7 @@ class WelcomViewController: UIViewController, UITextFieldDelegate {
         dismiss(animated: true)
     }
     
-    func setGradientBackground() {
+   private func setGradientBackground() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
         gradientLayer.colors = [UIColor.blue.cgColor, UIColor.white.cgColor]

@@ -12,35 +12,30 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
+    private let user = "User"
+    private let password = "Password"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if nameTextField.text == "User",
-           passwordTextField.text == "Password" {
-            guard let welcomVC = segue.destination as? WelcomViewController
-            else {return}
-            welcomVC.userName = nameTextField.text
-            nameTextField.text = ""
-            passwordTextField.text = ""
-        } else {
-            showAlert(with: "Invalod login or password",
+        let welcomeVC = segue.destination as! WelcomViewController
+        welcomeVC.userName = user
+    }
+    
+    @IBAction func logButtonPresed() {
+        if nameTextField.text != user ||
+           passwordTextField.text != password {
+            showAlert(with: "Invalid login or password",
                       message: "Pleas, enter correct login and password")
+            return
         }
+       performSegue(withIdentifier: "showWelcom", sender: nil)
     }
     
     @IBAction func forgetUserName() {
-        showAlert(with: "Oops!", message: "Your login is User😉")
+        showAlert(with: "Oops!", message: "Your login is \(user)😉")
     }
     
     @IBAction func forgerPassword() {
-        showAlert(with: "Oops!", message: "Your password is Password😉")
+        showAlert(with: "Oops!", message: "Your password is \(password)😉")
     }
 }
 
@@ -50,10 +45,26 @@ extension LogInViewController {
         let alert = UIAlertController(title: title, message: message,
                                       preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
-            self.nameTextField.text = ""
             self.passwordTextField.text = ""
         }
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+}
+
+// MARK: - Work with keyboard
+extension LogInViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == nameTextField {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            logButtonPresed()
+        }
+        return true
     }
 }
